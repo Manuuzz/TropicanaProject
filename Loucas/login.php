@@ -18,10 +18,10 @@ if (isset($_POST['Deco'])) {
 if (isset($_POST['CONNECT'])) {
 
     // On définit les informations de connexion à la base de données
-    $db_username = 'TropicanaWEB';
-    $db_password = 'TropicanaWEB';
-    $db_name = 'Tropicana';
-    $db_host = '192.168.65.9';
+    $db_username = 'tropicana';
+    $db_password = 'Loucas025!';
+    $db_name = 'tropicana_bdd';
+    $db_host = 'mysql-tropicana.alwaysdata.net';
 
     try {
         // On se connecte à la base de données
