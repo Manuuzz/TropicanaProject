@@ -4,7 +4,7 @@
     <!-- Définir l'encodage des caractères pour être "utf-8" -->
     <meta charset="utf-8">
     <!-- Importer le fichier de style -->
-    <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="./CSS/style.css" media="screen" type="text/css" />
 </head>
 
 <body style='background:#fff;'>
@@ -31,7 +31,7 @@
             // puis rediriger l'utilisateur vers la page de connexion en utilisant header("location:login.php");
             if ($_GET['deconnexion'] == true) {
                 session_unset();
-                header("location:login.php");
+                header("location:index.php");
             }
         }
         // Si l'utilisateur est déjà connecté, récupérer son nom d'utilisateur à partir de la variable de session
