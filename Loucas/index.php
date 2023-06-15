@@ -141,7 +141,22 @@ session_start();
                 $lavageTemps6 = $_POST['lavage_temps6']; // Récupère le temps de lavage de l'étape 6 depuis le formulaire
 
                 // Requête SQL pour insérer la recette dans la base de données
-                $TheRecette->ajouter($nom, $rincageTemps1, $rincageTemps3, $rincageTemps5, $rincageTemps7, $produit2, $produit4, $produit6, $lavageTemps2, $lavageTemps4, $lavageTemps6, $lavageDegres2, $lavageDegres4, $lavageDegres6);
+                $TheRecette->ajouter(
+                    $nom,
+                    $rincageTemps1,
+                    $rincageTemps3,
+                    $rincageTemps5,
+                    $rincageTemps7,
+                    $produit2,
+                    $produit4,
+                    $produit6,
+                    $lavageTemps2,
+                    $lavageTemps4,
+                    $lavageTemps6,
+                    $lavageDegres2,
+                    $lavageDegres4,
+                    $lavageDegres6
+                );
             }
             if (isset($_POST["AjouterRecette"])) {
                 $reqselectproduit = "SELECT id, nom FROM Produit";
@@ -286,7 +301,7 @@ session_start();
             <a href="index.php"><img src="IMAGES/Tropicana 2.png" /></a>
 
 
-            <h2>Mofier une recette de nettoyage</h2>
+            <h2>Modifier une recette de nettoyage</h2>
             <label><b>Nom de la recette :</b></label>
             <input type="text" placeholder="Nom de la recette" name="nom" required>
 
@@ -483,6 +498,20 @@ session_start();
 
 </div>
 </div>
+<script>
+    window.addEventListener('mousemove', moveBackground);
+
+    function moveBackground(event) {
+        var background = document.getElementById('background');
+        var mouseX = event.clientX;
+        var mouseY = event.clientY;
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var percentX = (mouseX / windowWidth) * 100;
+        var percentY = (mouseY / windowHeight) * 100;
+        background.style.backgroundPosition = percentX + '% ' + percentY + '%';
+    }
+</script>
 </body>
 
 </html>
